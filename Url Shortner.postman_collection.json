@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "80c74956-dea8-411a-bc3b-35ca47819d33",
+		"name": "Url Shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18860560"
+	},
+	"item": [
+		{
+			"name": "Create Random",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"long_url\" : \"https://www.ascii-code.com/\",\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/12312tes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"12312tes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Custom",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"long_url\" : \"https://www.ascii-code.com/\",\r\n    \"short_url\": \"tesssss\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/custom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"custom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get URL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/{{shorturl}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"{{shorturl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
